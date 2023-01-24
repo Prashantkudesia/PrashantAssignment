@@ -1,0 +1,55 @@
+
+@tag @tag1
+Scenario: To validate user should able to view or change item in cart         # Features/Purchasing_F4.feature:5
+  Given User in on the home page                                              # com.stepdefiniton.Amazon_stepdefinition.user_in_on_the_home_page()
+  When user click on search bar                                               # com.stepdefiniton.Amazon_stepdefinition.user_click_on_search_bar()
+  And user give some product name                                             # com.stepdefiniton.Amazon_stepdefinition.user_give_some_product_name()
+  And user add item in cart                                                   # com.stepdefiniton.Amazon_stepdefinition.user_add_item_in_cart()
+  Then user visit the cart and view or change product quantity for purchasing # com.stepdefiniton.Amazon_stepdefinition.user_visit_the_cart_and_view_or_change_product_quantity_for_purchasing()
+
+@tag1
+Scenario: To validate that user should able to add any product to cart # Features/add_to_cart_F3.feature:5
+  Given User in on the home page                                       # com.stepdefiniton.Amazon_stepdefinition.user_in_on_the_home_page()
+  When user click on search bar                                        # com.stepdefiniton.Amazon_stepdefinition.user_click_on_search_bar()
+  And user give some product name                                      # com.stepdefiniton.Amazon_stepdefinition.user_give_some_product_name()
+  Then user choose the product and add to the cart                     # com.stepdefiniton.Amazon_stepdefinition.user_choose_the_product_and_add_to_the_cart()
+
+@tag2
+Scenario Outline: To validate that user should able to buy product directly without adding in cart # Features/add_to_cart_F3.feature:12
+  Given User in on the home page                                                                   # com.stepdefiniton.Amazon_stepdefinition.user_in_on_the_home_page()
+  When user click on search bar                                                                    # com.stepdefiniton.Amazon_stepdefinition.user_click_on_search_bar()
+  And user give some product name                                                                  # com.stepdefiniton.Amazon_stepdefinition.user_give_some_product_name()
+  Then user choose the product and click buy now for direct purchasing                             # com.stepdefiniton.Amazon_stepdefinition.user_choose_the_product_and_click_buy_now_for_direct_purchasing()
+
+@tag @tag1
+Scenario: To validate that user should buy a product from his cart # Features/buying.feature:6
+  Given User in on the home page                                   # com.stepdefiniton.Amazon_stepdefinition.user_in_on_the_home_page()
+  When user click on search bar                                    # com.stepdefiniton.Amazon_stepdefinition.user_click_on_search_bar()
+  And user give some product name                                  # com.stepdefiniton.Amazon_stepdefinition.user_give_some_product_name()
+  And user add product                                             # com.stepdefiniton.Amazon_stepdefinition.user_add_product()
+  Then user is able to do checkout                                 # com.stepdefiniton.Amazon_stepdefinition.user_is_able_to_do_checkout()
+
+Scenario: To validate that user should login with correct credentials # Features/login_F1.feature:5
+  Given User in on the home page                                      # com.stepdefiniton.Amazon_stepdefinition.user_in_on_the_home_page()
+  When user enter username                                            # com.stepdefiniton.Amazon_stepdefinition.user_enter_username()
+  And user enters password                                            # com.stepdefiniton.Amazon_stepdefinition.user_enters_password()
+  And user clicks on login button                                     # com.stepdefiniton.Amazon_stepdefinition.user_clicks_on_login_button()
+  Then user logged in successfully                                    # com.stepdefiniton.Amazon_stepdefinition.user_logged_in_successfully()
+
+Scenario: To validate that user should not login with Incorrect credentials # Features/login_F1.feature:12
+  Given User in on the home page                                            # com.stepdefiniton.Amazon_stepdefinition.user_in_on_the_home_page()
+  When user enter wrong username                                            # com.stepdefiniton.Amazon_stepdefinition.user_enter_wrong_username()
+  Then user is shown a error message                                        # com.stepdefiniton.Amazon_stepdefinition.user_is_shown_a_error_message()
+
+@tag1
+Scenario: To validate that user should search for a product # Features/search_F2.feature:5
+  Given User in on the home page                            # com.stepdefiniton.Amazon_stepdefinition.user_in_on_the_home_page()
+  When user click on search bar                             # com.stepdefiniton.Amazon_stepdefinition.user_click_on_search_bar()
+  And user give some product name                           # com.stepdefiniton.Amazon_stepdefinition.user_give_some_product_name()
+  Then results will come up on the screen                   # com.stepdefiniton.Amazon_stepdefinition.results_will_come_up_on_the_screen()
+
+@tag2
+Scenario Outline: To validate that user should get error for wrong product search # Features/search_F2.feature:13
+  Given User in on the home page                                                  # com.stepdefiniton.Amazon_stepdefinition.user_in_on_the_home_page()
+  When user enter wrong product name                                              # com.stepdefiniton.Amazon_stepdefinition.user_enter_wrong_product_name()
+  Then user should get error message                                              # com.stepdefiniton.Amazon_stepdefinition.user_should_get_error_message()

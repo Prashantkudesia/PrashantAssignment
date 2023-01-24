@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="188.948">
+    <testcase classname="Purchasing" name="To validate user should able to view or change item in cart" time="23.93">
+        <system-out><![CDATA[Given User in on the home page..............................................passed
+When user click on search bar...............................................passed
+And user give some product name.............................................passed
+And user add item in cart...................................................passed
+Then user visit the cart and view or change product quantity for purchasing.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Add to cart" name="To validate that user should able to add any product to cart" time="15.714">
+        <system-out><![CDATA[Given User in on the home page..............................................passed
+When user click on search bar...............................................passed
+And user give some product name.............................................passed
+Then user choose the product and add to the cart............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Add to cart" name="To validate that user should able to buy product directly without adding in cart" time="34.233">
+        <system-out><![CDATA[Given User in on the home page..............................................passed
+When user click on search bar...............................................passed
+And user give some product name.............................................passed
+Then user choose the product and click buy now for direct purchasing........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Buying product" name="To validate that user should buy a product from his cart" time="46.119">
+        <system-out><![CDATA[Given User in on the home page..............................................passed
+When user click on search bar...............................................passed
+And user give some product name.............................................passed
+And user add product........................................................passed
+Then user is able to do checkout............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login for Website" name="To validate that user should login with correct credentials" time="10.722">
+        <system-out><![CDATA[Given User in on the home page..............................................passed
+When user enter username....................................................passed
+And user enters password....................................................passed
+And user clicks on login button.............................................passed
+Then user logged in successfully............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login for Website" name="To validate that user should not login with Incorrect credentials" time="24.738">
+        <system-out><![CDATA[Given User in on the home page..............................................passed
+When user enter wrong username..............................................passed
+Then user is shown a error message..........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Search" name="To validate that user should search for a product" time="9.04">
+        <system-out><![CDATA[Given User in on the home page..............................................passed
+When user click on search bar...............................................passed
+And user give some product name.............................................passed
+Then results will come up on the screen.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Search" name="To validate that user should get error for wrong product search" time="24.168">
+        <system-out><![CDATA[Given User in on the home page..............................................passed
+When user enter wrong product name..........................................passed
+Then user should get error message..........................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
